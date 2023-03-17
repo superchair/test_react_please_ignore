@@ -13,6 +13,9 @@ RUN npm install
 # run the test suite
 RUN CI=true npm test
 
+# build the react project
+RUN npm run build
+
 
 # STAGE 2 - build deployable image
 FROM nginx:1.21 AS production
