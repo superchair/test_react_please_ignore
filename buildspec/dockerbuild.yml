@@ -19,7 +19,7 @@ phases:
   build:
     commands:
       # build docker image
-      - docker build --target prod -f docker/Dockerfile.webserver -t ${ECR_REPO_NAME}:latest .
+      - docker build --target production -f docker/Dockerfile -t ${ECR_REPO_NAME}:latest .
   post_build:
     commands:
       - docker tag ${ECR_REPO_NAME}:latest ${ECR_IMAGE_URI}

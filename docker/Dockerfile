@@ -15,7 +15,7 @@ RUN CI=true npm test
 
 
 # STAGE 2 - build deployable image
-FROM nginx:1.21
+FROM nginx:1.21 AS production
 
 # Expose HTTP port
 EXPOSE 80
